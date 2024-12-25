@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("background.png") no-repeat center/cover;
+    padding: 50px 5%;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    transform:scale(0);
+    animation: zoom-in 1s ease forwards;
+}
+
+@keyframes zoom-in{
+    100%{
+        transform: scale(1);
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.animated {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slide-in{
+    100%{
+        transform: translateY(30px);
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color:azure;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.navbar a:hover {
+    border-color: white;
+}
+
+.navbar a.active {
+    border-color: white;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+    padding: 50px 5% 0;
+    color: white;
+    animation-delay: 1.5s;
+}
+
+.home-detail h1{
+    font-size: 50px;
+    line-height: 1;
+}
+
+.home-detail h2{
+    font-size: 30px;
+}
+
+.home-detail p{
+    margin: 10px 0 20px;
+}
+
+.home-detail .download-social{
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 39px;
+    box-shadow: 0 0 9px #fff;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: transparent;
+    box-shadow: none;
+    color: white;
+}
+
+.home-detail .social-icons{
+    margin-left: 20px;
+}
+
+.download-social .social-icons a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: 0.5s;
+}
+
+.download-social .social-icons a:hover {
+    background: #fff;
+    box-shadow:  0 0 9px #fff;
+    color: #333;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px #fff;
+    overflow: hidden;
+    animation: float 5s ease-in-out infinite, morph 10s ease-in-out infinite; /* Combine floating and morphing */
+}
+
+/* Ripple effect with morphing */
+.home-img .img-box::before {
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: -15%;
+    width: 130%;
+    height: 130%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(30px);
+    animation: ripple 6s infinite ease-in-out, morph 8s infinite ease-in-out;
+}
+
+/* Image Styling */
+.home-img .img-box img {
+    position: absolute;
+    top: -48px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Ripple Animation */
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+/* Morphing Circle Shape */
+@keyframes morph {
+    0%, 100% {
+        border-radius: 50%;
+    }
+    20% {
+        border-radius: 40% 60% 55% 45%;
+    }
+    40% {
+        border-radius: 65% 35% 50% 50%;
+    }
+    60% {
+        border-radius: 45% 55% 60% 40%;
+    }
+    80% {
+        border-radius: 70% 30% 40% 60%;
+    }
+}
