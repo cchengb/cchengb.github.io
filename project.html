@@ -9,31 +9,91 @@
 <body>
   <div class="container">
     <header class="animated">
-      <a href="index.html" class="logo">Portfolio.</a>
+      <a href="index.html" class="logo">Colin Cheng</a>
       <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="project.html" class="active">Project</a>
+        <a href="index.html" >About</a>
+        <a href="Resume.html">Resume</a>
+        <a href="project.html"class="active">Project</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
-      </nav>
+      </nav> 
     </header>
 
-    <section class="home animated">
-      <div class="home-detail">
+    <section class="projects-section animated">
         <h1>My Projects</h1>
-        <h2>Capstone Project: MMA Fight Predictor</h2>
-        <p>
-          Built a data-driven prediction model using Python, PostgreSQL, and machine learning. Scraped UFC data using Scrapy, cleaned and migrated it via SQLAlchemy, and built a REST API to allow predictions based on historical fight data.
-        </p>
-        <h2>Other Projects</h2>
-        <ul>
-          <li>Flask-based Inventory Tracker</li>
-          <li>React + OpenWeatherMap Dashboard</li>
-          <li>Personal Portfolio Website (this site!)</li>
-        </ul>
-      </div>
-    </section>
+        <div class="cards">
+          <!-- Card #1: Capstone -->
+          <div class="card">
+            <h2>Capstone Project: MMA Prediction Model</h2>
+            <img src="./src/pmmma.png" alt="MMA Fight Predictor Demo">
+            <p>
+              Built a data-driven prediction model using Python, PostgreSQL, and machine learning.
+              Scraped UFC data using Scrapy, cleaned and migrated it via SQLAlchemy, and built a
+              REST API to allow predictions based on historical fight data.
+            </p>
+            <p>
+              <a href="https://github.com/vbabatchev/mma-prediction-model" target="_blank">
+                View GitHub Repo
+              </a>
+            </p>
+          </div>
+
+        <!-- Card #2: Furever Pet Adoption -->
+        <div class="card">
+            <h2>Furever Pet Adoption</h2>
+            <img src="./src/Adopters_page.gif" alt="Furever Pet Adoption Repo Screenshot">
+            <p>
+            A full-stack web application for managing a pet adoption agency. Built as part of a database systems course, featuring:
+            <ul>
+                <li>Node.js with Express</li>
+                <li>MySQL backend</li>
+                <li>Handlebars templating engine</li>
+            </ul>
+            </p>
+            <p>
+            <a href="https://github.com/cchengb/Furever-Pet-Adoption" target="_blank">View GitHub Repo</a>
+            </p>
+        </div>
+        
+      
+          <!-- Card #3: Weather Dashboard -->
+          <div class="card">
+            <h2>Graphics Projects</h2>
+            <img src="./src/finalgraphics.png" alt="Graphics Project" >
+            <p>
+                A series of 3D graphics programming projects using C++.
+            </p>
+            <p>
+                <a href="https://github.com/cchengb/intro-graphics" target="_blank">View GitHub Repo</a>
+            </p>
+          </div>
+      
+        <!-- Card #4: Android Treasure Hunt App -->
+        <div class="card">
+            <h2>Android App: Mobile Treasure Hunt</h2>
+            <img src="./src/treasurehunt.png" alt="Treasure Hunt Demo">
+            <p>
+            A mobile treasure hunt game built using Android Studio with GPS integration. Users are given clues
+            and hints to navigate to specific real-world locations (e.g., Seattle Space Needle) using
+            geolocation.
+            </p>
+            <p>
+            Developed with:
+            <ul>
+                <li>Java</li>
+                <li>Android SDK</li>
+                <li>Google Maps API</li>
+            </ul>
+            </p>
+            <p>
+            <a href="https://youtu.be/6IOTW7SA06w?si=MTHRLzK9tkoDzhBz" target="_blank">
+                Watch Demo Video
+            </a>
+            </p>
+        </div>
+        
+      </section>
+      
   </div>
 </body>
 </html>

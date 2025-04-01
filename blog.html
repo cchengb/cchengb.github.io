@@ -9,24 +9,54 @@
 <body>
   <div class="container">
     <header class="animated">
-      <a href="index.html" class="logo">Portfolio.</a>
+      <a href="index.html" class="logo">Colin Cheng</a>
       <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="index.html" >About</a>
+        <a href="Resume.html">Resume</a>
         <a href="project.html">Project</a>
         <a href="blog.html" class="active">Blog</a>
         <a href="contact.html">Contact</a>
-      </nav>
+      </nav> 
     </header>
 
-    <section class="home animated">
-      <div class="home-detail">
-        <h1>Latest Blog Post</h1>
-        <img src="image.png" alt="SQLAlchemy Blog" style="width:100%;max-width:300px;">
-        <h2><a href="#">Using SQLAlchemy to Migrate Cleaned MMA Data</a></h2>
-        <p>Published on Jan 30, 2025 — Learn how we used SQLAlchemy to streamline our data pipeline and integrate clean fight stats into a PostgreSQL database for our MMA prediction system.</p>
-      </div>
-    </section>
+    <section class="blog-posts-section">
+        <h1>Latest Blog Posts</h1>
+        <div class="cards">
+      
+          <!-- Blog Card 1 -->
+          <a href="https://blogs.oregonstate.edu/colincheng/2025/01/30/using-sqlalchemy-to-migrate-cleaned-mma-data-to-postgresql/" class="card blog-card" target="_blank">
+            <img src="./src/sqlalchemy.gif" alt="SQLAlchemy Blog Thumbnail" class="card-thumb" style="width:100%; max-width:300px; margin-bottom: 20px;">
+            <div class="card-content">
+              <p class="card-date">Jan 30, 2025</p>
+              <h3 class="card-title">Using SQLAlchemy to Migrate Cleaned MMA Data</h3>
+              <p class="card-desc">Learn how SQLAlchemy was used to streamline the data pipeline for MMA stats.</p>
+            </div>
+          </a>
+      
+          <!-- Blog Card 2 -->
+          <a href="https://blogs.oregonstate.edu/colincheng/2025/01/08/73/" class="card blog-card" target="_blank">
+            <img src="./src/code.gif" alt="Clean Code Blog Thumbnail" class="card-thumb"style="width:100%; max-width:300px; margin-bottom: 20px;">
+            <div class="card-content">
+              <p class="card-date">Jan 8, 2025</p>
+              <h3 class="card-title">Clean Code and Code Smells: Lessons Learned</h3>
+              <p class="card-desc">Reflections on software craftsmanship and what makes code clean or problematic.</p>
+            </div>
+          </a>
+      
+          <!-- Blog Card 3 -->
+          <a href="https://blogs.oregonstate.edu/colincheng/2025/02/25/reflections-on-my-capstone-project-journey-mma-prediction-model/" class="card blog-card" target="_blank">
+            <img src="./src/reflection.png" alt="Capstone Reflection Blog Thumbnail" class="card-thumb" style="width:100%; max-width:300px; margin-bottom: 20px;">
+            <div class="card-content">
+              <p class="card-date">Feb 25, 2025</p>
+              <h3 class="card-title">Reflections on My Capstone Project Journey</h3>
+              <p class="card-desc">Lessons and insights from building the MMA prediction model with a team.</p>
+            </div>
+          </a>
+      
+        </div>
+      </section>
+      
+      
   </div>
 </body>
 </html>
